@@ -1,11 +1,9 @@
 /*
 
-Page: main JS
-Author: Surjith S M
-URI: http://surjithctly.in/
-Version: 1.0
+la fonctio de pop up intégré ici
 
 */
+
 
 (function($) {
     "use strict";

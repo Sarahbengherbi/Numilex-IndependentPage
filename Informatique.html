@@ -113,57 +113,86 @@
                     <div class="container">
                         <h2 class="title-2"> Nous recrutons ! </h2>
                         <div class="row job-stats">
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#informatique">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Développeur Full Stack</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
+                            <!-- Carte Développeur Full Stack -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-fullstack')">
+                                    <h4 class="subtitle">Développeur Full Stack</h4>
+                                </div>
+                                
+                                <!-- Modal Full Stack -->
+                                <div id="modal-fullstack" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" onclick="closeModal('modal-fullstack')">&times;</span>
+                                        <h3>Envoyez votre candidature à recrutement@numilex.com ou cliquez sur "Postuler" !</h3>
+                                        
+                                        <h4>Missions :</h4>
+                                        <ul>
+                                            <li>Concevoir et développer des applications performantes et sécurisées.</li>
+                                            <li>Travailler sur des architectures scalables et des API robustes.</li>
+                                            <li>Collaborer avec les équipes produit et design pour offrir la meilleure expérience utilisateur.</li>
+                                            <li>Participer aux sprints Agile et à l’amélioration continue des process.</li>
+                                        </ul>
+                                
+                                        <h4>Profil recherché :</h4>
+                                        <ul>
+                                            <li>Maîtrise de JavaScript (Node.js, React, Vue, Angular), Python ou PHP.</li>
+                                            <li>Expérience avec les bases de données SQL/NoSQL.</li>
+                                            <li>Sensibilité aux pratiques DevOps et CI/CD.</li>
+                                            <li>Esprit d’équipe, rigueur et autonomie.</li>
+                                        </ul>
+                                
+                                        <p>Veuillez envoyer votre CV à <a href="mailto:contact@numilex.com">contact@numilex.com</a></p>
+                                        <a href="mailto:recrutement@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+                                    </div>
+                                </div>
+                                
                             </div>
-                            </a>
-                          </div>
-                      
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#informatique">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Développeur front-end</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
-
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#informatique">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Développeur back-end</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
-                          
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#informatique">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Ingénieur DevOps</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#informatique">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Admin Systèmes et Réseaux</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#informatique">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Designer UI/UX</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
+                            
+                            <!-- Carte Développeur Front-End -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-frontend')">
+                                    <h4 class="subtitle">Développeur Front-End</h4>
+                                </div>
+                                
+                                <!-- Modal Front-End -->
+                                <div id="modal-frontend" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" onclick="closeModal('modal-frontend')">&times;</span>
+                                        <h3>Postuler pour Développeur Front-End</h3>
+                                        <p>Veuillez envoyer votre CV à contact@numilex.com</p>
+                                        <a href="mailto:contact@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                        
+                        <!-- JavaScript pour ouvrir et fermer la modal -->
+                        <script>
+                            // Fonction pour ouvrir la modal
+                            function openModal(modalId) {
+                                var modal = document.getElementById(modalId);
+                                modal.style.display = "block";
+                            }
+                        
+                            // Fonction pour fermer la modal
+                            function closeModal(modalId) {
+                                var modal = document.getElementById(modalId);
+                                modal.style.display = "none";
+                            }
+                        
+                            // Fermer la modal en cliquant à l'extérieur de la modal
+                            window.onclick = function(event) {
+                                if (event.target.className == "modal") {
+                                    var modals = document.querySelectorAll('.modal');
+                                    modals.forEach(function(modal) {
+                                        modal.style.display = "none";
+                                    });
+                                }
+                            }
+                        </script>
+                        
                         </div>
                       </div>
                       
@@ -317,6 +346,27 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+ <!-- pop up js  -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+    
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    
+        // Fermer la modale en cliquant en dehors
+        window.onclick = function(event) {
+            let modals = document.getElementsByClassName("modal");
+            for (let modal of modals) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+    
 
     <!-- Back to top -->
     <script src="js/back-to-top.js"></script>

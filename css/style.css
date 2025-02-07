@@ -53,6 +53,104 @@ body.boxed {
     background: #f4f5f8;
 }
 
+/* Styles généraux pour la modal */
+.modal {
+    display: none; /* Modal invisible par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Contenu de la modal */
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%; /* Largeur maximale de la modal */
+    width: 500px; /* Largeur par défaut */
+    box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur */
+    overflow-y: auto;
+
+  }
+  /* Contenu de la modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 90%; /* Largeur maximale de la modal */
+  width: 500px; /* Largeur par défaut */
+  box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur */
+  overflow-y: auto; /* Ajouter un défilement vertical si nécessaire */
+  max-height: 80vh; /* Hauteur maximale à 80% de la hauteur de la fenêtre */
+}
+
+/* Responsivité avec des media queries */
+@media (max-width: 768px) {
+  /* Pour les tablettes et les écrans plus petits */
+  .modal-content {
+    width: 80%; /* Largeur de la modal réduite sur les petits écrans */
+    max-width: 400px; /* Taille maximale plus petite */
+    max-height: 70vh; /* Hauteur maximale plus petite pour les tablettes */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Pour les smartphones */
+  .modal-content {
+    width: 95%; /* Modal presque aussi large que l'écran */
+    max-width: 350px; /* Taille maximale réduite pour les petits écrans */
+    max-height: 60vh; /* Hauteur maximale encore plus petite sur les smartphones */
+  }
+}
+
+  
+  /* Titre de la modal */
+  .modal-content h3 {
+    font-size: 1.5rem; /* Taille de police par défaut */
+  }
+  
+  /* Bouton de fermeture */
+  .close {
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  
+  /* Responsivité avec des media queries */
+  @media (max-width: 768px) {
+    /* Pour les tablettes et les écrans plus petits */
+    .modal-content {
+      width: 80%; /* Largeur de la modal réduite sur les petits écrans */
+      max-width: 400px; /* Taille maximale plus petite */
+    }
+  
+    .modal-content h3 {
+      font-size: 1.25rem; /* Taille de police plus petite */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Pour les smartphones */
+    .modal-content {
+      width: 95%; /* Modal presque aussi large que l'écran */
+      max-width: 350px; /* Taille maximale réduite pour les petits écrans */
+    }
+  
+    .modal-content h3 {
+      font-size: 1rem; /* Réduction de la taille de la police */
+    }
+  }
+  
 .modal {
     display: none;
     position: fixed;
@@ -625,13 +723,33 @@ li.dropdown i.fa.dropdown-toggle {
 
 /* --------------- BreadCrumb --------------- */
 
-.page-title {
-    background: url('../images/page_title_bg.png') no-repeat left center;
+.page-titleinfo {
+    position: relative;
+    background: url('../images/computer-program-code-on-a-screen-2023-11-27-05-17-31-utc.webp') no-repeat left center;
     background-size: cover;
     padding: 70px 0;
+    color: white; /* Pour assurer une bonne lisibilité du texte */
 }
 
-.page-title h2.title {
+.page-titleinfo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Noir avec une opacité de 50% */
+    z-index: 1;
+}
+
+/* Assurez-vous que le contenu de la section reste au-dessus */
+.page-titleinfo1 * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.page-titleinfo h2.title {
     margin: 0 0 25px;
     font-size: 50px;
     color: #fff;
@@ -654,7 +772,7 @@ li.dropdown i.fa.dropdown-toggle {
 .breadcrumbs span,
 .breadcrumbs a {
     font-size: 15px;
-    color: #61656f;
+    color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -665,7 +783,7 @@ li.dropdown i.fa.dropdown-toggle {
 
 .breadcrumbs i {
     padding-right: 15px;
-    color: #bebebe;
+    color: #7c7474;
 }
 
 .breadcrumbs span.parent i {

@@ -112,57 +112,236 @@
                     <div class="container">
                         <h2 class="title-2"> Nous recrutons ! </h2>
                         <div class="row job-stats">
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#Business support">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Responsables Admin & Finance</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                            </div>
-                            </a>
-                          </div>
-                      
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#Business support">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Assistants de Direction</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
+                         <!-- Carte Responsable Admin & Finance -->
+<div class="col-md-4 col-sm-6">
+    <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-AdminFinance')">
+        <h4 class="subtitle">Responsable Admin & Finance</h4>
+    </div>
 
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#Business support">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Coordinateurs RH</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
+    <!-- Modal Responsable Admin & Finance -->
+    <div id="modal-AdminFinance" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-AdminFinance')">&times;</span>
+            
+            <h3>Postuler pour Responsable Admin & Finance</h3>
+            <h3>Envoyez votre candidature à recrutement@numilex.com ou cliquez sur "Postuler" !</h3>
+
+            <h4>Missions :</h4>
+            <ul>
+                <li>Gérer la comptabilité, les finances et le reporting financier de l'entreprise.</li>
+                <li>Superviser la gestion administrative et les processus financiers internes.</li>
+                <li>Participer à la stratégie financière et à la prise de décision.</li>
+                <li>Mettre en place des procédures pour optimiser les coûts et la rentabilité de l'entreprise.</li>
+                <li>Assurer la conformité des pratiques financières avec la réglementation en vigueur.</li>
+            </ul>
+
+            <h4>Profil recherché :</h4>
+            <ul>
+                <li>Diplôme en finance, comptabilité ou gestion des affaires.</li>
+                <li>Expérience en gestion financière et administrative dans un environnement dynamique.</li>
+                <li>Connaissance des logiciels de gestion financière et comptable.</li>
+                <li>Esprit d'analyse, rigueur et capacité à travailler sous pression.</li>
+            </ul>
+
+            <a href="mailto:recrutement@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+        </div>
+    </div>
+</div>
+
+                      
+                          <!-- Carte Assistant de Direction -->
+<div class="col-md-4 col-sm-6">
+    <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-AssistantDirection')">
+        <h4 class="subtitle">Assistant de Direction</h4>
+    </div>
+
+    <!-- Modal Assistant de Direction -->
+    <div id="modal-AssistantDirection" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-AssistantDirection')">&times;</span>
+            
+            <h3>Postuler pour Assistant de Direction</h3>
+            <h3>Envoyez votre candidature à recrutement@numilex.com ou cliquez sur "Postuler" !</h3>
+
+            <h4>Missions :</h4>
+            <ul>
+                <li>Assister la direction dans la gestion quotidienne des tâches administratives.</li>
+                <li>Organiser et coordonner les agendas, réunions et déplacements des dirigeants.</li>
+                <li>Gérer la communication interne et externe de l'entreprise.</li>
+                <li>Préparer les documents et rapports nécessaires pour les réunions.</li>
+                <li>Effectuer la gestion des courriers, emails et autres correspondances.</li>
+            </ul>
+
+            <h4>Profil recherché :</h4>
+            <ul>
+                <li>Diplôme en secrétariat, administration ou domaine similaire.</li>
+                <li>Expérience dans un rôle administratif ou de gestion de direction.</li>
+                <li>Excellente maîtrise des outils bureautiques et logiciels de gestion.</li>
+                <li>Organisation, rigueur et capacités de communication orale et écrite.</li>
+            </ul>
+
+            <a href="mailto:recrutement@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+        </div>
+    </div>
+</div>
+
+
+                          <!-- Carte Coordinateur RH -->
+<div class="col-md-4 col-sm-6">
+    <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-CoordinateurRH')">
+        <h4 class="subtitle">Coordinateur RH</h4>
+    </div>
+
+    <!-- Modal Coordinateur RH -->
+    <div id="modal-CoordinateurRH" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-CoordinateurRH')">&times;</span>
+            
+            <h3>Postuler pour Coordinateur RH</h3>
+            <h3>Envoyez votre candidature à recrutement@numilex.com ou cliquez sur "Postuler" !</h3>
+
+            <h4>Missions :</h4>
+            <ul>
+                <li>Gérer le recrutement et l'intégration des nouveaux collaborateurs.</li>
+                <li>Mettre en place et suivre les formations et le développement des compétences des employés.</li>
+                <li>Assurer la gestion des dossiers du personnel et des procédures administratives RH.</li>
+                <li>Suivre et analyser les indicateurs RH pour améliorer les performances et la satisfaction des employés.</li>
+                <li>Conseiller les managers sur les questions liées aux ressources humaines.</li>
+            </ul>
+
+            <h4>Profil recherché :</h4>
+            <ul>
+                <li>Diplôme en gestion des ressources humaines ou dans un domaine similaire.</li>
+                <li>Expérience dans la gestion des ressources humaines ou en recrutement.</li>
+                <li>Excellentes compétences en communication et en gestion des conflits.</li>
+                <li>Capacité à travailler de manière autonome et à gérer plusieurs tâches simultanément.</li>
+                <li>Maîtrise des outils RH et des logiciels de gestion des talents.</li>
+            </ul>
+
+            <a href="mailto:recrutement@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+        </div>
+    </div>
+</div>
+
                           
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#Business support">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Sales (Commerciaux)</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#Business support">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Prospecteurs</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="col-md-4 col-sm-6">
-                            <a href="#Business support">
-                              <div class="stats-box text-center" tabindex="0">
-                                <h4 class="subtitle">Agents de Support en Ligne</h4>
-                                <a href="#" class="btn btn-primary about-quick-fact-button" role="button">Postuler</a>
-                              </div>
-                            </a>
-                          </div>
+                         <!-- Carte Sales (Commerciaux) -->
+<div class="col-md-4 col-sm-6">
+    <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-Sales')">
+        <h4 class="subtitle">Sales (Commerciaux)</h4>
+    </div>
+
+    <!-- Modal Sales (Commerciaux) -->
+    <div id="modal-Sales" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-Sales')">&times;</span>
+            
+            <h3>Postuler pour Sales (Commerciaux)</h3>
+            <h3>Envoyez votre candidature à recrutement@numilex.com ou cliquez sur "Postuler" !</h3>
+
+            <h4>Missions :</h4>
+            <ul>
+                <li>Développer et entretenir des relations avec les clients existants et potentiels.</li>
+                <li>Identifier de nouvelles opportunités commerciales et générer des leads qualifiés.</li>
+                <li>Présenter et promouvoir les produits/services de l'entreprise.</li>
+                <li>Atteindre les objectifs de vente mensuels et annuels.</li>
+                <li>Assurer le suivi des commandes et des contrats avec les clients.</li>
+                <li>Collaborer avec les équipes marketing pour élaborer des stratégies de vente efficaces.</li>
+            </ul>
+
+            <h4>Profil recherché :</h4>
+            <ul>
+                <li>Expérience réussie dans la vente ou dans un rôle commercial.</li>
+                <li>Excellentes compétences en négociation et en communication.</li>
+                <li>Capacité à atteindre et dépasser les objectifs de vente.</li>
+                <li>Maîtrise des outils CRM et des logiciels de gestion des ventes.</li>
+                <li>Esprit d'équipe et forte capacité à travailler de manière autonome.</li>
+                <li>Orientation client et approche solution.</li>
+            </ul>
+
+            <a href="mailto:recrutement@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+        </div>
+    </div>
+</div>
+
+<!-- Carte Prospecteurs -->
+<div class="col-md-4 col-sm-6">
+    <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-Prospecteurs')">
+        <h4 class="subtitle">Prospecteurs</h4>
+    </div>
+
+    <!-- Modal Prospecteurs -->
+    <div id="modal-Prospecteurs" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-Prospecteurs')">&times;</span>
+            
+            <h3>Postuler pour Prospecteurs</h3>
+            <h3>Envoyez votre candidature à recrutement@numilex.com ou cliquez sur "Postuler" !</h3>
+
+            <h4>Missions :</h4>
+            <ul>
+                <li>Identifier et qualifier des prospects potentiels à travers la recherche et l'analyse de marché.</li>
+                <li>Contacter les prospects par téléphone, email, ou via des événements commerciaux.</li>
+                <li>Présenter les produits ou services de l'entreprise et générer des leads qualifiés.</li>
+                <li>Collaborer avec l'équipe commerciale pour transformer les prospects en clients.</li>
+                <li>Suivre les indicateurs de performance et atteindre les objectifs de prospection définis.</li>
+                <li>Mettre à jour régulièrement les bases de données des prospects et maintenir un suivi rigoureux.</li>
+            </ul>
+
+            <h4>Profil recherché :</h4>
+            <ul>
+                <li>Expérience en prospection commerciale ou dans un rôle similaire.</li>
+                <li>Excellentes compétences en communication et en prise de contact.</li>
+                <li>Capacité à identifier des opportunités d'affaires et à travailler de manière autonome.</li>
+                <li>Esprit d'analyse et bonne compréhension du marché.</li>
+                <li>Maîtrise des outils CRM pour le suivi des prospects.</li>
+                <li>Motivation à atteindre les objectifs et esprit de conquête.</li>
+            </ul>
+
+            <a href="mailto:recrutement@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+        </div>
+    </div>
+</div>
+
+                       
+                         <!-- Carte Agents de Support en Ligne -->
+<div class="col-md-4 col-sm-6">
+    <div class="stats-box text-center" tabindex="0" onclick="openModal('modal-AgentsSupport')">
+        <h4 class="subtitle">Agents de Support en Ligne</h4>
+    </div>
+
+    <!-- Modal Agents de Support en Ligne -->
+    <div id="modal-AgentsSupport" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-AgentsSupport')">&times;</span>
+            
+            <h3>Postuler pour Agents de Support en Ligne</h3>
+            <h3>Envoyez votre candidature à recrutement@numilex.com ou cliquez sur "Postuler" !</h3>
+
+            <h4>Missions :</h4>
+            <ul>
+                <li>Fournir une assistance technique et répondre aux questions des clients par chat en ligne.</li>
+                <li>Diagnostiquer et résoudre les problèmes techniques ou d'utilisation des produits/services.</li>
+                <li>Gérer et répondre aux demandes des clients en temps réel, avec efficacité et professionnalisme.</li>
+                <li>Documenter les demandes et solutions dans une base de données pour améliorer les processus.</li>
+                <li>Collaborer avec les autres équipes pour résoudre des problèmes plus complexes si nécessaire.</li>
+                <li>Assurer un suivi des tickets et garantir un haut niveau de satisfaction client.</li>
+            </ul>
+
+            <h4>Profil recherché :</h4>
+            <ul>
+                <li>Excellente communication verbale et écrite, avec une forte capacité à résoudre des problèmes.</li>
+                <li>Compétences en gestion du temps et capacité à gérer plusieurs demandes simultanément.</li>
+                <li>Expérience dans un rôle de support technique ou de service client est un plus.</li>
+                <li>Bonne connaissance des outils de chat en ligne et des systèmes de gestion des tickets.</li>
+                <li>Patience et capacité à gérer des situations stressantes avec calme et professionnalisme.</li>
+                <li>Orientation client, avec un souci constant de la satisfaction du client.</li>
+            </ul>
+
+            <a href="mailto:recrutement@numilex.com" class="btn btn-primary">Postuler</a> <!-- Bouton Postuler dans la modal -->
+        </div>
+    </div>
+</div>
+
                         </div>
                       </div>
                       
@@ -309,8 +488,31 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <!-- Javascripts
+     
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    // Fonction pour ouvrir la modal
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    }
 
+    // Fonction pour fermer la modal
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+    }
+
+    // Fermer la modal en cliquant à l'extérieur de la modal
+    window.onclick = function(event) {
+        if (event.target.className == "modal") {
+            var modals = document.querySelectorAll('.modal');
+            modals.forEach(function(modal) {
+                modal.style.display = "none";
+            });
+        }
+    }
+</script>
     <!-- Jquery Library -->
     <script src="js/jquery.min.js"></script>
 

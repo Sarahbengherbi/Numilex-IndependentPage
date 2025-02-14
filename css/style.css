@@ -723,33 +723,33 @@ li.dropdown i.fa.dropdown-toggle {
 
 /* --------------- BreadCrumb --------------- */
 
-.page-titleinfo {
+
+.page-title {
     position: relative;
-    background: url('../images/computer-program-code-on-a-screen-2023-11-27-05-17-31-utc.webp') no-repeat left center;
+    /* background: url('../images/computer-program-code-on-a-screen-2023-11-27-05-17-31-utc.webp') no-repeat left center; */
     background-size: cover;
     padding: 70px 0;
-    color: white; /* Pour assurer une bonne lisibilité du texte */
+    /* color: white; Pour assurer une bonne lisibilité du texte */
 }
-
-.page-titleinfo::before {
+.page-title::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Noir avec une opacité de 50% */
+    background: rgba(0, 0, 0, 0.); /* Noir avec une opacité de 50% */
     z-index: 1;
 }
 
 /* Assurez-vous que le contenu de la section reste au-dessus */
-.page-titleinfo1 * {
+.page-title * {
     position: relative;
     z-index: 2;
 }
 
 
-.page-titleinfo h2.title {
+.page-title h2.title {
     margin: 0 0 25px;
     font-size: 50px;
     color: #fff;
@@ -772,7 +772,7 @@ li.dropdown i.fa.dropdown-toggle {
 .breadcrumbs span,
 .breadcrumbs a {
     font-size: 15px;
-    color: #ffffff;
+    color: #61656f;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -783,7 +783,7 @@ li.dropdown i.fa.dropdown-toggle {
 
 .breadcrumbs i {
     padding-right: 15px;
-    color: #7c7474;
+    color: #bebebe;
 }
 
 .breadcrumbs span.parent i {

@@ -1,0 +1,87 @@
+Définitions
+
+Données personnelles : Toute information permettant d'identifier directement ou indirectement une personne physique (ex. : nom, prénom, email, adresse IP).
+
+Traitement de données : Toute opération appliquée à des données personnelles (collecte, stockage, modification, transmission).
+
+Responsable du traitement : L'entité qui décide des finalités et des moyens du traitement des données personnelles.
+
+Le responsable du traitement des données est :
+
+[Nom de l'entreprise]
+[Type d'entité juridique, capital]
+Adresse : [Adresse complète]
+Numéro SIRET : [Numéro]
+N° TVA : [Numéro]
+Email : [Email de contact]
+Site internet : [URL du site]
+
+2. Collecte des données personnelles
+
+Nous collectons des données lorsque vous :
+
+Passez une commande
+
+Remplissez un formulaire de contact
+
+Naviguez sur notre site (cookies et outils d'analyse)
+
+Partagez un avis ou un commentaire
+
+Les types de données collectées peuvent inclure :
+
+Données d’identité (nom, prénom, adresse postale)
+
+Données de contact (téléphone, email)
+
+Données de paiement (via des prestataires tiers sécurisés, aucune conservation des données bancaires)
+
+Données de navigation (adresse IP, cookies, préférences)
+
+3. Finalités et durée de conservation
+
+Vos données sont collectées pour :
+
+Gérer la relation commerciale (commande, facturation) → Conservation : Durée de la relation + 5 ans
+
+Améliorer nos services et proposer des offres adaptées → Conservation : 3 ans après le dernier contact
+
+Respecter nos obligations légales (facturation) → Conservation : 10 ans
+
+4. Partage et sécurité des données
+
+Vos données ne sont ni vendues ni louées. Elles peuvent être partagées avec :
+
+Nos prestataires de paiement et logistique
+
+Nos sous-traitants informatiques
+
+Nous mettons en place des mesures de sécurité (chiffrement, accès restreint) pour protéger vos informations contre tout accès non autorisé.
+
+5. Vos droits
+
+Conformément au RGPD et à la loi Informatique et Libertés, vous pouvez :
+
+Accéder à vos données
+
+Demander la modification ou suppression de vos données
+
+Vous opposer à leur traitement
+
+Exercer votre droit à la portabilité
+
+Pour toute demande, contactez-nous à : [Email de contact]
+
+Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL : www.cnil.fr
+
+6. Cookies
+
+Nous utilisons des cookies pour :
+
+Améliorer l’expérience utilisateur
+
+Analyser le trafic
+
+Proposer des contenus personnalisés
+
+Vous pouvez gérer vos préférences via les paramètres de votre navigateur.

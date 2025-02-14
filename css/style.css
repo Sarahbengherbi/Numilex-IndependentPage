@@ -87,7 +87,7 @@ body.boxed {
   width: 500px; /* Largeur par défaut */
   box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur */
   overflow-y: auto; /* Ajouter un défilement vertical si nécessaire */
-  max-height: 80vh; /* Hauteur maximale à 80% de la hauteur de la fenêtre */
+  max-height: 50vh; /* Hauteur maximale à 80% de la hauteur de la fenêtre */
 }
 
 /* Responsivité avec des media queries */

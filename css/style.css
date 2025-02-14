@@ -131,7 +131,9 @@ body.boxed {
     /* Pour les tablettes et les écrans plus petits */
     .modal-content {
       width: 80%; /* Largeur de la modal réduite sur les petits écrans */
+      line-height: 6.6rem;
       max-width: 400px; /* Taille maximale plus petite */
+      comment ajouter un gap entre les lignes dans les petits ecrans 
     }
   
     .modal-content h3 {
@@ -147,7 +149,7 @@ body.boxed {
     }
   
     .modal-content h3 {
-      font-size: 1rem; /* Réduction de la taille de la police */
+      font-size: 2rem; /* Réduction de la taille de la police */
     }
   }
   

@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'numilexco@gmail.com'; // Your SMTP username
+                $mail->Username = 'bengherbisarah@gmail.com'; // Your SMTP username
                 $mail->Password = 'uaze nlxr xhvu wfeo'; // Your SMTP password (use app password for Gmail)
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use STARTTLS
                 $mail->Port = 587; // Use 587 for STARTTLS

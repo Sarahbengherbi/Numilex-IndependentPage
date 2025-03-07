@@ -300,8 +300,10 @@
 
                                 <form action="php/subscribe.php" id="subscribeform" method="post">
                                     <div class="form-group">
-                                        <input type="email" id="email" name="email" placeholder="Entrez votre e-mail" class="form-control" title="Entrez votre e-mail, s'il vous plaît" data-msg-email="Please enter a valid email">
+                                        <input type="email" id="s_email" name="s_email" placeholder="Entrez votre e-mail" class="form-control" title="Entrez votre e-mail, s'il vous plaît" data-msg-email="Please enter a valid email">
                                     </div>
+                                    <input type="text" name="form-anti-honeypot" style="display: none;">
+
                                     <button type="submit" class="btn btn-block" id="js-subscribe-btn"> Abonnez-vous maintenant ! </button>
 
                                     <div id="js-subscribe-result" data-success-msg="Done. Subscribed" data-error-msg="Oops. Error!"></div>

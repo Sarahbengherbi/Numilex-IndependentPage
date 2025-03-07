@@ -1,76 +1,76 @@
 <?php
+header('Content-Type: application/json');
 
-/*
- * ------------------------------------
- * Mailchimp Email Configuration
- * ------------------------------------
- */
+// Include PHPMailer autoload (if using Composer, adjust the path if necessary)
+require 'vendor/autoload.php'; 
 
-$apiKey       = 'YOUR_MAILCHIMP_API_KEY_HERE'; /*Your Mailchiimp API Key*/
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-$listId       = 'LIST_ID_HERE'; /*Mailchimp List ID*/
+// Initialize PHPMailer
+$mail = new PHPMailer();
+$emailTO = [];
 
-$email        = $_POST['email'];
-$status       = 'pending'; /* subscribed, unsubscribed, cleaned, pending */
-$fname        = ''; 
-$lname        = ''; 
-$datacenter   = substr($apiKey,strpos($apiKey,'-')+1);
-$post_url     = 'https://' . $datacenter . '.api.mailchimp.com/3.0/lists/' . $listId . '/members/';
+// Site information
+$sitename = 'Numilex';
+$emailTO[] = ['email' => 'contact@numilex.com', 'name' => 'Numilex team'];
+$subject = "Nouvelle inscription à la newsletter - " . $sitename;
+$msg_success = "Vous avez <strong>réussi</strong> à vous inscrire à notre newsletter. Merci de votre intérêt !";
 
-/*
-Need to capture First name and last name? use this.
-$fname        = $_POST['fname'];
-$lname        = $_POST['lname'];
-*/
+// Check if the request method is POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Validate required fields
+    if (!empty($_POST["s_email"])) {
+        $s_email = $_POST["s_email"];
+        $honeypot = $_POST["form-anti-honeypot"] ?? '';
 
+        // Proceed if honeypot is empty
+        if ($honeypot === '' && !empty($emailTO)) {
+            try {
+                // SMTP Configuration
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'numilexco@gmail.com'; // Your SMTP username
+                $mail->Password = 'uaze nlxr xhvu wfeo'; // Your SMTP password (use app password for Gmail)
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use STARTTLS
+                $mail->Port = 587; // Use 587 for STARTTLS
 
-/*
- * ------------------------------------
- * END CONFIGURATION
- * ------------------------------------
- */
+                // Email settings
+                $mail->setFrom($s_email, 'Nouvelle Inscription - ' . $sitename);
+                $mail->addReplyTo($s_email);
+                $mail->Subject = $subject;
 
-/*
- * -------------------------------------------------
- * NERD STUFF BELOW, ONLY EDIT IF YOU ARE A PRO
- * -------------------------------------------------
- */
+                // Add recipient addresses
+                foreach ($emailTO as $to) {
+                    $mail->addAddress($to['email'], $to['name']);
+                }
 
-$json = json_encode(array(
-    "email_address" => $email,
-    "status" => $status,
-    "merge_fields" => array(
-        'FNAME' => $fname,
-        'LNAME' => $lname
-    )
-));
+                // Build the email body
+                $bodymsg = "Nouvelle inscription à la newsletter:<br>";
+                $bodymsg .= "Email: $s_email<br>";
+                $bodymsg .= $_SERVER['HTTP_REFERER'] ? '<br>---<br><br>Ce email a été envoyé par: ' . $_SERVER['HTTP_REFERER'] : '';
 
+                // Set email format to HTML and character set
+                $mail->isHTML(true);
+                $mail->CharSet = 'UTF-8';
+                $mail->Body = $bodymsg;
 
-    $ch = curl_init($post_url);
+                // Send the email
+                if ($mail->send()) {
+                    $response = ['result' => "success", 'message' => $msg_success];
+                } else {
+                    $response = ['result' => "error", 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"];
+                }
+                echo json_encode($response);
 
-    curl_setopt($ch, CURLOPT_USERPWD, 'user:' . $apiKey);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $json);                                                                                                                 
-
-    $result = curl_exec($ch);
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $data = json_decode($result);
- 
-    curl_close($ch);
-
-    if ($httpCode === 200) {
-        echo 'success';
+            } catch (Exception $e) {
+                echo json_encode(['result' => "error", 'message' => "An error occurred: " . $e->getMessage()]);
+            }
+        } else {
+            echo json_encode(['result' => "error", 'message' => "Bot <strong>Detected</strong>."]);
+        }
     } else {
-        if ($data->detail){
-        echo $data->detail;
-       } else {
-        echo $data;
-       }
+        echo json_encode(['result' => "error", 'message' => "Veuillez <strong>entrer</strong> une adresse e-mail valide."]);
     }
- 
- 
-?>
+}

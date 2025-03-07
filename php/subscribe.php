@@ -13,7 +13,7 @@ $emailTO = [];
 
 // Site information
 $sitename = 'Numilex';
-$emailTO[] = ['email' => 'contact@numilex.com', 'name' => 'Numilex team'];
+$emailTO[] = ['email' => 'bengherbisarah@gmail.com', 'name' => 'Numilex team'];
 $subject = "Nouvelle inscription à la newsletter - " . $sitename;
 $msg_success = "Vous avez <strong>réussi</strong> à vous inscrire à notre newsletter. Merci de votre intérêt !";
 
